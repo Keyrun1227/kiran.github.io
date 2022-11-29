@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        SGPA
+    </title>
+    <style>
+        table
+        {
+            background-color: #21b6A8;
+            border-radius: 15px;
+            border-collapse: separate;
+            border: 5px solid;
+        }
+        tr,th,td
+        {
+        border-radius: 8px;
+        padding: 10px;
+        }
+        input{
+            border-radius: 10px;
+            border: 2px solid #eb91f3;
+        }
+    </style>
+    <script type="text/javascript" src="checker.js"></script>
+</head>
+<body>
+    <br>
+    <h2 align="center">
+        AR20 SGPA Calculator
+    </h2>
+    <table id ="myTable" align="center" cellspacing=5 cellpadding=5 style="border: 1px solid">
+        <form name="inputform" id="inputform" method="POST">
+            <tr>
+                <td><label for="sdept"><b>Department:</b></label></td>
+                <td>
+                    <select name="sdept" id="sdept" onchange="checkdepartment();">
+                    <option value="" disabled selected>Dept</option>
+                    <option value="1">CSE</option>
+                    <option value="2">IT</option>
+                    <option value="3">Civil</option>
+                    <option value="4">Mech</option>
+                    <option value="5">Chem</option>
+                    <option value="6">EEE</option>
+                    <option value="7">ECE</option>
+                    </select>
+                <td>
+            </tr>
+            <tr>
+                <td><label for="ssem"><b>Semster:</b></label></td>
+                <td>
+                    <select name="ssem" id="ssem" onchange="checksemester();">
+                    <option value="0" disabled selected>Sem</option>
+                    <option value="1" >I</option>
+                    <option value="2">II</option>
+                    <option value="3">III</option>
+                    <option value="4">IV</option>
+                    <option value="5">V</option>
+                    <option value="6">VI</option>
+                    </select>
+                <td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" onclick="calculate()">&nbsp&nbsp&nbsp
+                    <input type="reset">
+                </td>
+            </tr>
+        </form>
+    </table>
+    <br>
+</body>
+</html>
